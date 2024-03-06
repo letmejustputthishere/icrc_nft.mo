@@ -4,6 +4,7 @@ import ICRC3 "mo:icrc3-mo";
 
 module {
   public type InitArgs = {
+    assetCanisterId : Principal;
     icrc7_args : ICRC7.InitArgs;
     icrc30_args : ICRC30.InitArgs;
     icrc3_args : ICRC3.InitArgs;

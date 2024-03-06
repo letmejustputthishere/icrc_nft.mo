@@ -348,7 +348,12 @@ shared (_init_msg) actor class NFTCanister(args : Types.InitArgs) : async (ICRC7
         metadata = #Map([
           (
             "tokenUri",
-            #Text("asset canister url"),
+            #Text(
+              "https://"
+              # Principal.toText(args.assetCanisterId)
+              # "icp0.io/"
+              # Nat.toText(nextTokenId)
+            ),
           ),
           (
             "icrc7:owner_account",
